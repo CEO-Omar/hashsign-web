@@ -30,7 +30,8 @@
     }
   </script>
   <style>
-    body { background-color: #080c14; }
+    html { color-scheme: dark; }
+    body { background-color: #080c14; color: #e2e8f0; }
 
     .glass-card {
       background: linear-gradient(135deg, rgba(255,255,255,0.045) 0%, rgba(255,255,255,0.015) 100%);
@@ -200,7 +201,7 @@
     <p class="text-indigo-400 text-xs font-semibold tracking-widest uppercase mb-3">Legal Document</p>
     <h1 class="text-4xl sm:text-5xl font-bold text-white tracking-tight mb-3">Terms of Service</h1>
     <p class="text-slate-500 text-sm">HashSign™ is owned and operated by <strong class="text-slate-300">Exemplar Copy LLC</strong></p>
-    <p class="text-slate-600 text-xs mt-2">Effective Date: July 1, 2026 &nbsp;·&nbsp; Last Updated: July 5, 2026</p>
+    <p class="text-slate-600 text-xs mt-2">Effective Date: July 1, 2026 &nbsp;·&nbsp; Last Updated: October 23, 2026</p>
   </div>
 
   <!-- CONTENT -->
@@ -214,7 +215,7 @@
 
       <!-- Legal disclaimer callout -->
       <div class="warning-box mb-10">
-        <p><strong style="color:#fde68a;">Not Legal Advice:</strong> HashSign provides AI-assisted document analysis tools. Exemplar Copy LLC is a technology company, not a law firm. Use of HashSign does not constitute legal representation, and no attorney-client relationship is formed. See Section 6 for the full disclaimer.</p>
+        <p><strong style="color:#fde68a;">Not Legal Advice:</strong> HashSign, its on-device drafting and inspection tools, and its Agent Connectors provide automated document tooling and general information. Exemplar Copy LLC is a technology company, not a law firm. Use of HashSign is not legal representation, and no attorney-client relationship is formed. See Section 6.</p>
       </div>
 
       <div class="glass-card rounded-3xl p-8 sm:p-10 legal-content">
@@ -307,67 +308,89 @@
         <p>Exemplar Copy LLC reserves the right to suspend or terminate your account for any violation of these Terms without prior notice.</p>
 
         <h2>5. User Content</h2>
-        <p>You retain all ownership rights to the contract documents you upload to HashSign. By using the AI Legal Audit feature, you grant Exemplar Copy LLC and our third-party AI provider (Google LLC) a limited, temporary license to process the text content of your document solely for the purpose of generating your audit report.</p>
+        <p>You retain ownership of the contracts and messages you create in HashSign. On-device drafting and inspection do not give Exemplar Copy LLC a license to read that content. If you tap Cloud boost or Deep review, you grant Exemplar Copy LLC and Google LLC a limited license to process the text (and any file you attach) solely to produce that result.</p>
+        <p>If you hand a prompt to Grok or Muse, you are sending that prompt to your own account with that third party. That transmission is governed by your agreement with them.</p>
         <p>You represent and warrant that:</p>
         <ul>
           <li>You have the legal right to upload, sign, and process each document you submit through HashSign.</li>
-          <li>Your use of HashSign does not violate any confidentiality obligations, contractual restrictions, or applicable law.</li>
-          <li>You will not upload documents containing the personal data of third parties without a lawful basis for doing so.</li>
+          <li>Your use of HashSign does not violate any confidentiality obligation, contractual restriction, or applicable law.</li>
+          <li>You will not upload documents or messages containing another person's personal data without a lawful basis.</li>
+          <li>You will not appoint an Electronic Agent to sign a document you do not have authority to sign.</li>
         </ul>
 
-        <h2>6. AI Legal Audit Disclaimer — Not Legal Advice</h2>
+        <h2>6. No Legal Advice</h2>
         <div class="danger-box">
-          <p><strong style="color:#f87171;">IMPORTANT — NO ATTORNEY-CLIENT RELATIONSHIP:</strong> The AI Legal Audit feature of HashSign is a technology tool designed to assist users in identifying potential issues in contracts. It does not constitute legal advice, legal representation, or the practice of law. No attorney-client relationship is created between you and Exemplar Copy LLC, or between you and any party, by virtue of your use of HashSign or its AI audit outputs.</p>
+          <p><strong style="color:#f87171;">No attorney-client relationship.</strong> HashSign, its on-device drafting and inspection engines, its optional cloud review, and its Agent Connectors are automated document tools and general information. They are not legal representation or advice from a licensed attorney. No attorney-client relationship is created between you and Exemplar Copy LLC, or between you and any other person, by using HashSign or relying on its output.</p>
         </div>
         <ul>
-          <li><strong>Exemplar Copy LLC is a technology company, not a law firm</strong>, and does not employ attorneys for the purpose of providing legal counsel to users.</li>
-          <li>AI-generated audit results are produced by a large language model (Google Gemini) and may contain errors, omissions, or misinterpretations of legal language.</li>
-          <li>AI audit outputs do not replace the advice of a licensed attorney. <strong>You should consult a qualified attorney</strong> before signing any contract with significant legal or financial consequences.</li>
-          <li>Exemplar Copy LLC makes no warranty, express or implied, that AI audit results are accurate, complete, current, or applicable to your specific jurisdiction or circumstances.</li>
-          <li>Exemplar Copy LLC shall not be liable for any damages or losses arising from your reliance on AI-generated audit output.</li>
-          <li>The AI audit feature is provided for informational and convenience purposes only. Legal outcomes depend on jurisdiction-specific laws, facts, and circumstances that the AI cannot fully assess.</li>
+          <li><strong>Exemplar Copy LLC is a technology company, not a law firm</strong>, and does not provide legal counsel through the App.</li>
+          <li>Drafts, risk scores, clause flags, and imported assistant replies can be wrong, incomplete, or unfit for your facts or jurisdiction.</li>
+          <li>Cloud boost and Deep review, when you request them, are produced with Google's Gemini API. A Grok or Muse reply is produced in your own third-party session. Neither is a lawyer.</li>
+          <li>These tools do not replace a licensed attorney. Consult a qualified attorney before you sign anything with meaningful legal or financial consequences.</li>
+          <li>Exemplar Copy LLC does not warrant that any draft, inspection, risk score, or agent action is accurate, complete, current, or enforceable.</li>
+          <li>Exemplar Copy LLC is not liable for a loss that comes from relying on that output.</li>
         </ul>
 
-        <h2>7. Blockchain and Cryptographic Signing Disclaimer</h2>
-        <p>HashSign enables cryptographic signing and Hedera network anchoring of document hashes. You acknowledge:</p>
+        <h2>7. Authorized Electronic Agents</h2>
+        <p>HashSign can act as an electronic agent only after you turn on Co-Pilot or Auto-Sign and sign an Electronic Agent Mandate. The mandate is identified by an ID in the form <strong>HSM-</strong> followed by the connector code and a short code, for example <strong>HSM-GRK-7Q2M9X</strong>.</p>
+        <div class="warning-box">
+          <p><strong style="color:#fde68a;">Your authorization.</strong> By enabling Co-Pilot or Auto-Sign and executing an Electronic Agent Mandate, you expressly authorize the Electronic Agent you configured to stage or affix your electronic signature, as described below, under the federal ESIGN Act, 15 U.S.C. § 7001(h) and § 7006(3), and the Uniform Electronic Transactions Act § 14. You agree that you are legally bound by a signature the agent affixes within the mandate, until you revoke the mandate.</p>
+        </div>
         <ul>
-          <li>Blockchain records are <strong>permanent and irrevocable</strong>. Exemplar Copy LLC cannot delete or alter records submitted to the Hedera public ledger on your behalf.</li>
-          <li>While Hedera anchoring provides strong evidence of a document's existence at a point in time, <strong>legal admissibility of electronic signatures and blockchain records varies by jurisdiction</strong>. Consult a qualified attorney in your jurisdiction.</li>
-          <li>Exemplar Copy LLC does not guarantee that HashSign's electronic signatures comply with any specific e-signature law (including ESIGN, UETA, eIDAS, or others) in your jurisdiction without independent legal verification.</li>
-          <li>You are solely responsible for maintaining access to your private signing key. Loss of Secure Enclave access (e.g., device loss without backup) may result in loss of signing capability that cannot be recovered by Exemplar Copy LLC.</li>
+          <li><strong>Co-Pilot</strong> may place your saved signature on a document and stage it for you. Nothing is sealed, and you are not bound by that staged signature, until you tap Approve and Seal.</li>
+          <li><strong>Auto-Sign</strong> may sign and seal on your behalf only when the document is an allowed type, passes every standing guardrail you set, scores at or below your risk threshold, and stays within your dollar exposure cap. Anything outside those limits is returned to you. A signature affixed inside those limits is your signature, and you are bound by that agreement as if you had signed it yourself.</li>
+          <li>Each staged or sealed agent action is written to your Agent Activity log and marked as executed through an Authorized Electronic Agent, with the mandate ID.</li>
+          <li>You may change your rules, switch to Observer, or revoke the mandate at any time in Agent Connectors. Revocation stops further signing immediately. It does not undo a document already sealed.</li>
+          <li>You are responsible for the rules, caps, and signature on file. An agent will follow the mandate you signed, including a mandate that is broader than you later wish it had been.</li>
+          <li>Whether a particular signature is enforceable still depends on the agreement, the parties, and the law of the place that governs it. The citations above describe the authorization you give. They are not a guarantee of outcome in every court.</li>
         </ul>
 
-        <h2>8. Disclaimers of Warranties</h2>
+        <h2>8. Third-Party Trademarks and Interoperability</h2>
+        <p>Grok Connector and Muse Connector are independent interoperability connectors. A connector opens your own session, or copies a prompt for you to paste there. It is not a partnership, endorsement, or joint product.</p>
+        <div class="highlight-box">
+          <p>Grok Connector and Muse Connector are independent interoperability connectors. HashSign is not affiliated with, endorsed by, or sponsored by xAI, Meta, Anthropic, OpenAI, or Google. Claude, ChatGPT, Gemini, Grok, Muse, and all other third-party product names and trademarks belong to their respective owners.</p>
+        </div>
+        <p>HashSign version 1.2.0 ships the Grok Connector and the Muse Connector. It does not include a Claude, ChatGPT, or Gemini connector. Gemini is used only inside the optional Cloud boost and Deep review described in the Privacy Policy, which is HashSign's own cloud review, not a Gemini connector.</p>
+
+        <h2>9. Blockchain and Cryptographic Signing</h2>
+        <p>A sealed HashSign document is hashed with SHA-384. That digest may be anchored on the Hedera network. The file also carries an ML-DSA (post-quantum) signature computed on your device. You acknowledge:</p>
+        <ul>
+          <li>A Hedera record is <strong>permanent</strong>. Exemplar Copy LLC cannot delete or alter it.</li>
+          <li>An anchor is strong evidence that a particular file existed at a time. It does not, by itself, decide whether the agreement is valid or admissible. That depends on the jurisdiction and the facts.</li>
+          <li>You are responsible for the device that holds your signing keys. If you lose the device and have no backup, Exemplar Copy LLC cannot recreate that key.</li>
+        </ul>
+
+        <h2>10. Disclaimers of Warranties</h2>
         <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, HASHSIGN AND ALL CONTENT, FEATURES, AND SERVICES ARE PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, NON-INFRINGEMENT, AND ACCURACY.</p>
         <p>EXEMPLAR COPY LLC DOES NOT WARRANT THAT THE SERVICE WILL BE UNINTERRUPTED, ERROR-FREE, COMPLETELY SECURE, OR THAT DEFECTS WILL BE CORRECTED.</p>
 
-        <h2>9. Limitation of Liability</h2>
-        <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, EXEMPLAR COPY LLC, ITS OFFICERS, DIRECTORS, EMPLOYEES, AND AGENTS SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, PUNITIVE, OR EXEMPLARY DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS, LOSS OF DATA, LOSS OF GOODWILL, OR LOSS OF BUSINESS OPPORTUNITY, ARISING OUT OF OR IN CONNECTION WITH YOUR USE OF OR INABILITY TO USE HASHSIGN.</p>
+        <h2>11. Limitation of Liability</h2>
+        <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, EXEMPLAR COPY LLC, ITS OFFICERS, DIRECTORS, EMPLOYEES, AND AGENTS SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, PUNITIVE, OR EXEMPLARY DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS, LOSS OF DATA, LOSS OF GOODWILL, OR LOSS OF BUSINESS OPPORTUNITY, ARISING OUT OF OR IN CONNECTION WITH YOUR USE OF OR INABILITY TO USE HASHSIGN, INCLUDING A SIGNATURE AFFIXED BY AN ELECTRONIC AGENT UNDER A MANDATE YOU AUTHORIZED.</p>
         <p>IN NO EVENT SHALL EXEMPLAR COPY LLC'S TOTAL CUMULATIVE LIABILITY TO YOU EXCEED THE GREATER OF: (A) THE AMOUNT YOU PAID TO EXEMPLAR COPY LLC IN THE TWELVE (12) MONTHS PRECEDING THE CLAIM, OR (B) ONE HUNDRED U.S. DOLLARS ($100.00).</p>
-        <p>Some jurisdictions do not allow the exclusion or limitation of certain warranties or liabilities; in such jurisdictions, the above limitations apply to the fullest extent permitted by law.</p>
+        <p>Some jurisdictions do not allow the exclusion or limitation of certain warranties or liabilities. In those jurisdictions, the limitations above apply to the fullest extent the law allows.</p>
 
-        <h2>10. Indemnification</h2>
-        <p>You agree to defend, indemnify, and hold harmless Exemplar Copy LLC and its officers, directors, employees, contractors, and agents from and against any claims, damages, losses, costs, and expenses (including reasonable legal fees) arising out of or relating to: (a) your use of the Service; (b) your violation of these Terms; (c) your violation of any third-party right; or (d) any document you process through HashSign.</p>
+        <h2>12. Indemnification</h2>
+        <p>You agree to defend, indemnify, and hold harmless Exemplar Copy LLC and its officers, directors, employees, contractors, and agents from and against any claims, damages, losses, costs, and expenses (including reasonable legal fees) arising out of or relating to: (a) your use of the Service; (b) your violation of these Terms; (c) your violation of any third-party right; (d) any document you process through HashSign; or (e) a signature your Electronic Agent affixes under a mandate you authorized.</p>
 
-        <h2>11. Termination</h2>
-        <p>Exemplar Copy LLC may suspend or terminate your access to HashSign at any time, with or without cause, and with or without notice. Upon termination, the license granted under Section 2 will immediately cease. Sections 6, 7, 8, 9, 10, 12, and 13 shall survive any termination of these Terms.</p>
+        <h2>13. Termination</h2>
+        <p>Exemplar Copy LLC may suspend or terminate your access to HashSign at any time, with or without cause, and with or without notice. Upon termination, the license granted under Section 2 ends. Sections 6, 7, 8, 9, 10, 11, 12, 14, and 15 survive termination. A mandate you already used to seal a document, and any Hedera record, survive as well.</p>
 
-        <h2>12. Governing Law and Dispute Resolution</h2>
-        <p>These Terms shall be governed by and construed in accordance with the laws of the State of Delaware, United States, without regard to its conflict of law provisions.</p>
-        <p>Any dispute arising from these Terms or your use of HashSign shall be resolved through binding individual arbitration in accordance with the rules of the American Arbitration Association (AAA). <strong>You waive your right to a jury trial and to participate in any class action or representative proceeding.</strong></p>
-        <p>Notwithstanding the foregoing, either party may seek injunctive or other equitable relief in a court of competent jurisdiction for matters involving intellectual property or unauthorized access to the Service.</p>
+        <h2>14. Governing Law and Dispute Resolution</h2>
+        <p>These Terms are governed by the laws of the State of Delaware, United States, without regard to its conflict of law provisions.</p>
+        <p>Any dispute arising from these Terms or your use of HashSign shall be resolved through binding individual arbitration under the rules of the American Arbitration Association. <strong>You waive any right to a jury trial and to participate in a class or representative proceeding.</strong></p>
+        <p>Either party may seek injunctive or other equitable relief in a court of competent jurisdiction for intellectual property or unauthorized access.</p>
 
-        <h2>13. General Provisions</h2>
+        <h2>15. General Provisions</h2>
         <ul>
-          <li><strong>Entire Agreement:</strong> These Terms, together with our Privacy Policy, constitute the entire agreement between you and Exemplar Copy LLC regarding the Service.</li>
-          <li><strong>Severability:</strong> If any provision of these Terms is found invalid or unenforceable, that provision shall be limited or eliminated to the minimum extent necessary, and the remaining provisions shall continue in full force.</li>
-          <li><strong>Waiver:</strong> Exemplar Copy LLC's failure to enforce any provision of these Terms shall not be deemed a waiver of that right.</li>
-          <li><strong>Assignment:</strong> You may not assign or transfer your rights under these Terms without Exemplar Copy LLC's prior written consent. Exemplar Copy LLC may freely assign these Terms.</li>
-          <li><strong>Force Majeure:</strong> Exemplar Copy LLC is not liable for delays or failures in performance resulting from causes beyond our reasonable control.</li>
+          <li><strong>Entire agreement:</strong> These Terms, together with the Privacy Policy, are the entire agreement between you and Exemplar Copy LLC about the Service.</li>
+          <li><strong>Severability:</strong> If a provision is held invalid, it is limited to the minimum extent necessary and the rest stays in force.</li>
+          <li><strong>Waiver:</strong> A failure to enforce a provision is not a waiver.</li>
+          <li><strong>Assignment:</strong> You may not assign these Terms without Exemplar Copy LLC's prior written consent. Exemplar Copy LLC may assign them.</li>
+          <li><strong>Force majeure:</strong> Exemplar Copy LLC is not liable for a delay caused by events beyond its reasonable control.</li>
         </ul>
 
-        <h2>14. Contact Information</h2>
-        <p>For any questions regarding these Terms of Service, please contact Exemplar Copy LLC:</p>
+        <h2>16. Contact Information</h2>
+        <p>Questions about these Terms:</p>
         <ul>
           <li><strong>Email:</strong> <a href="mailto:legal@hashsign.app">legal@hashsign.app</a></li>
           <li><strong>Support:</strong> <a href="mailto:support@hashsign.app">support@hashsign.app</a></li>
