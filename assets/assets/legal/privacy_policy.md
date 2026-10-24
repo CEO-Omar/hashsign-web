@@ -3,7 +3,7 @@
 HashSign is owned and operated by Exemplar Copy LLC.
 
 **Effective Date:** July 1, 2026  
-**Last Updated:** October 23, 2026
+**Last Updated:** October 24, 2026
 
 **Important:** HashSign ("the App," "the Service") is wholly owned and operated by Exemplar Copy LLC, a limited liability company. All references to "we," "us," "our," and "HashSign" in this Privacy Policy refer to Exemplar Copy LLC.
 
@@ -15,7 +15,7 @@ This Privacy Policy explains what information we collect, how we use it, and wha
 
 If you have questions or concerns, please contact us at [privacy@hashsign.app](mailto:privacy@hashsign.app).
 
-This version describes the data practices of HashSign version 1.2.0, including on-device contract tooling, optional cloud review, Agent Connectors, profile photos, and Deal Rooms.
+This version describes the data practices of HashSign version 1.2.1, including on-device contract tooling, optional cloud review, Agent Connectors, profile photos, and Deal Rooms.
 
 ## 2. Information We Collect
 
@@ -44,6 +44,8 @@ When you use HashSign, we may automatically collect:
 
 **On your device by default.** Standard contract drafting, standing-rule audits, and risk scoring run locally on your device. Those runs do not send the contract to Exemplar Copy LLC or to a cloud model.
 
+A free account includes a complimentary quota of 3 Draft Contract runs and 3 Legal Inspect runs. The counter in the App shows how many remain, from 3 free down to Upgrade. Once those runs are used, drafting and inspection require HashSign Pro. HashSign Pro includes unlimited drafting and inspection, both on the device and with Cloud boost or Deep review. The quota covers on-device runs and cloud runs alike. Signing, SHA-384 hashing, and sealing stay available.
+
 Specifically:
 
 - An NDA, MSA, letter of intent, bill of sale, or custom draft is written by the on-device drafter unless you explicitly choose Cloud boost.
@@ -64,7 +66,7 @@ When you do tap it:
 - Our server sends that content to Google LLC's Gemini API over HTTPS to produce the draft or the inspection. The model used for this optional review is Google's Gemini API. Google's use of that submission is governed by Google's Gemini API terms and privacy policy.
 - The generated result (not a copy of your raw upload) may be stored in our `legal_cache` for up to 14 days so an identical request can be reused. We do not use your documents to train a HashSign model, and we do not sell or license your document content.
 - If the cloud request fails, the App falls back to the on-device engine.
-- You can draft, inspect, sign, and hash without ever using Cloud boost or Deep review. Remove or redact government ID numbers, account numbers, and similar identifiers before you send a document to cloud review.
+- You can sign and hash a document without using Cloud boost or Deep review. Draft Contract and Legal Inspect follow the complimentary quota in Section 3, including when the on-device engine produces the result. Remove or redact government ID numbers, account numbers, and similar identifiers before you send a document to cloud review.
 
 ## 5. External Agent Handoffs and Clipboard Access
 
