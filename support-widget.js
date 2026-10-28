@@ -2,7 +2,12 @@
  * Function URL, then answers from the on-page knowledge base. */
 (function () {
   var SUPPORT_EMAIL = "CEO@exemplarcopy.com";
-  var ENDPOINTS = [
+  var ASK_ENDPOINTS = [
+    "/api/support-bot",
+    "https://us-central1-suresign-c12ca.cloudfunctions.net/webSupportBot",
+  ];
+  var TICKET_ENDPOINTS = [
+    "/api/support-ticket",
     "/api/support-bot",
     "https://us-central1-suresign-c12ca.cloudfunctions.net/webSupportBot",
   ];
@@ -62,19 +67,25 @@
     return { reply: reply, suggestEscalation: escalation, matchedTopic: topic, remainingQuota: null, local: true };
   }
 
+  function readJsonResponse(response) {
+    var type = (response.headers.get("content-type") || "").toLowerCase();
+    if (!response.ok || type.indexOf("application/json") === -1) {
+      throw new Error("expected json");
+    }
+    return response.json();
+  }
+
   function post(action, payload) {
     var body = JSON.stringify(Object.assign({ action: action, sessionId: sessionId() }, payload));
+    var urls = action === "ticket" ? TICKET_ENDPOINTS : ASK_ENDPOINTS;
     var chain = Promise.reject(new Error("no endpoint"));
-    ENDPOINTS.forEach(function (url) {
+    urls.forEach(function (url) {
       chain = chain.catch(function () {
         return fetch(url, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: body,
-        }).then(function (response) {
-          if (!response.ok) throw new Error("status " + response.status);
-          return response.json();
-        });
+        }).then(readJsonResponse);
       });
     });
     return chain;
@@ -135,9 +146,37 @@
     var chips = el("div", "hs-chips");
     var note = el("p", "hs-note");
     var form = el("form", "hs-form");
-    form.innerHTML = '<input name="email" type="email" placeholder="Email" required /><input name="subject" placeholder="Subject" required maxlength="160" /><textarea name="message" placeholder="Details" required maxlength="4000"></textarea><button type="submit">Send ticket</button>';
+    var emailInput = document.createElement("input");
+    emailInput.name = "email";
+    emailInput.type = "email";
+    emailInput.placeholder = "Email";
+    emailInput.required = true;
+    var subjectInput = document.createElement("input");
+    subjectInput.name = "subject";
+    subjectInput.placeholder = "Subject";
+    subjectInput.required = true;
+    subjectInput.maxLength = 160;
+    var messageInput = document.createElement("textarea");
+    messageInput.name = "message";
+    messageInput.placeholder = "Details";
+    messageInput.required = true;
+    messageInput.maxLength = 4000;
+    var ticketSubmit = el("button", null, "Send ticket");
+    ticketSubmit.type = "submit";
+    form.appendChild(emailInput);
+    form.appendChild(subjectInput);
+    form.appendChild(messageInput);
+    form.appendChild(ticketSubmit);
     var compose = el("form", "hs-compose");
-    compose.innerHTML = '<input name="question" maxlength="500" placeholder="Ask about Pro, encryption, or ID checks" aria-label="Support question" /><button type="submit">Send</button>';
+    var questionInput = document.createElement("input");
+    questionInput.name = "question";
+    questionInput.maxLength = 500;
+    questionInput.placeholder = "Ask about Pro, encryption, or ID checks";
+    questionInput.setAttribute("aria-label", "Support question");
+    var askSubmit = el("button", null, "Send");
+    askSubmit.type = "submit";
+    compose.appendChild(questionInput);
+    compose.appendChild(askSubmit);
     var ticketBtn = el("button", null, "Submit Ticket to Human Support");
     ticketBtn.type = "button";
     chips.appendChild(ticketBtn);
@@ -189,16 +228,15 @@
     ticketBtn.addEventListener("click", function () { form.classList.toggle("open"); });
     compose.addEventListener("submit", function (event) {
       event.preventDefault();
-      var input = compose.elements.question;
-      ask(input.value);
-      input.value = "";
+      ask(questionInput.value);
+      questionInput.value = "";
     });
     form.addEventListener("submit", function (event) {
       event.preventDefault();
       var payload = {
-        email: form.elements.email.value,
-        subject: form.elements.subject.value,
-        message: form.elements.message.value,
+        email: emailInput.value,
+        subject: subjectInput.value,
+        message: messageInput.value,
         transcript: transcript.slice(-20),
       };
       note.textContent = "Sending ticket…";
