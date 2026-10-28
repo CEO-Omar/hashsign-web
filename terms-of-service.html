@@ -6,8 +6,9 @@
   <link rel="icon" href="/favicon.ico?v=2" sizes="64x64" />
   <link rel="icon" type="image/png" href="/favicon.png?v=2" />
   <link rel="apple-touch-icon" href="/icons/Icon-192.png?v=2" />
-  <title>Terms of Service — HashSign™ by Exemplar Copy LLC</title>
-  <meta name="description" content="HashSign Terms of Service and End User License Agreement. HashSign is owned and operated by Exemplar Copy LLC." />
+  <title>Terms of Use — HashSign™ by Exemplar Copy LLC d/b/a HashSign</title>
+  <meta name="description" content="HashSign Terms of Use. Exemplar Copy LLC d/b/a HashSign. HashSign Pro is $79.99 per year. Covers E2EE, biometric face signature, and US ID verification." />
+  <link rel="canonical" href="https://hashsign.app/terms-of-service.html" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -32,13 +33,11 @@
   <style>
     html { color-scheme: dark; }
     body { background-color: #080c14; color: #e2e8f0; }
-
     .glass-card {
       background: linear-gradient(135deg, rgba(255,255,255,0.045) 0%, rgba(255,255,255,0.015) 100%);
       backdrop-filter: blur(12px);
       border: 1px solid rgba(255,255,255,0.07);
     }
-
     body::before {
       content: '';
       position: fixed;
@@ -47,7 +46,6 @@
       pointer-events: none;
       z-index: 0;
     }
-
     .legal-content h2 {
       font-size: 1.125rem;
       font-weight: 600;
@@ -70,11 +68,7 @@
       margin-bottom: 1rem;
       font-size: 0.9375rem;
     }
-    .legal-content ul {
-      list-style: none;
-      padding: 0;
-      margin-bottom: 1rem;
-    }
+    .legal-content ul { list-style: none; padding: 0; margin-bottom: 1rem; }
     .legal-content ul li {
       color: #94a3b8;
       font-size: 0.9375rem;
@@ -89,104 +83,24 @@
       left: 0;
       color: #0ea5e9;
     }
-    .legal-content ol {
-      list-style: none;
-      counter-reset: ol-counter;
-      padding: 0;
-      margin-bottom: 1rem;
-    }
-    .legal-content ol li {
-      counter-increment: ol-counter;
-      color: #94a3b8;
-      font-size: 0.9375rem;
-      line-height: 1.75;
-      padding-left: 1.75rem;
-      position: relative;
-      margin-bottom: 0.5rem;
-    }
-    .legal-content ol li::before {
-      content: counter(ol-counter) ".";
-      position: absolute;
-      left: 0;
-      color: #0ea5e9;
-      font-weight: 600;
-    }
-    .legal-content a {
-      color: #38bdf8;
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-    .legal-content strong {
+    .legal-content a { color: #38bdf8; text-decoration: underline; text-underline-offset: 3px; }
+    .legal-content strong { color: #e2e8f0; font-weight: 600; }
+    .legal-content code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.85em;
       color: #e2e8f0;
-      font-weight: 600;
     }
-
-    .highlight-box {
-      background: rgba(14,165,233,0.07);
-      border: 1px solid rgba(14,165,233,0.18);
-      border-radius: 0.75rem;
-      padding: 1rem 1.25rem;
-      margin-bottom: 1.25rem;
-    }
-    .highlight-box p {
-      margin-bottom: 0 !important;
-      color: #7dd3fc !important;
-      font-size: 0.875rem !important;
-    }
-
-    .warning-box {
-      background: rgba(251,191,36,0.06);
-      border: 1px solid rgba(251,191,36,0.2);
-      border-radius: 0.75rem;
-      padding: 1rem 1.25rem;
-      margin-bottom: 1.25rem;
-    }
-    .warning-box p {
-      margin-bottom: 0 !important;
-      color: #fcd34d !important;
-      font-size: 0.875rem !important;
-    }
-
-    .danger-box {
-      background: rgba(239,68,68,0.06);
-      border: 1px solid rgba(239,68,68,0.18);
-      border-radius: 0.75rem;
-      padding: 1rem 1.25rem;
-      margin-bottom: 1.25rem;
-    }
-    .danger-box p {
-      margin-bottom: 0 !important;
-      color: #fca5a5 !important;
-      font-size: 0.875rem !important;
-    }
-
-    /* EULA / Subscription pricing table */
-    .pricing-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0.75rem 1rem;
-      border-bottom: 1px solid rgba(255,255,255,0.05);
-    }
-    .pricing-row:last-child { border-bottom: none; }
-    .pricing-row .plan-name { color: #e2e8f0; font-weight: 600; font-size: 0.9375rem; }
-    .pricing-row .plan-price { color: #38bdf8; font-weight: 700; font-size: 0.9375rem; }
-    .pricing-row .plan-note { color: #64748b; font-size: 0.8125rem; }
   </style>
 </head>
 <body class="text-slate-200 font-sans antialiased">
-
-  <!-- NAV -->
   <header class="relative z-20 w-full border-b border-white/[0.06]">
     <nav class="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
       <a href="/" class="flex items-center gap-2.5 group">
-        <img src="logo.jpeg" alt="HashSign™"
+        <img src="/logo.jpeg" alt="HashSign™"
              class="h-10 w-auto rounded-2xl shadow-lg shadow-black/50 group-hover:shadow-sky-500/25 transition-shadow duration-300" />
         <span class="font-semibold text-white tracking-tight text-[15px]">HashSign™</span>
       </a>
-
-      <a href="/"
-         class="inline-flex items-center gap-1.5 text-sm text-slate-400 hover:text-white transition-colors">
+      <a href="/" class="inline-flex items-center gap-1.5 text-sm text-slate-400 hover:text-white transition-colors">
         <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
         </svg>
@@ -194,228 +108,70 @@
       </a>
     </nav>
   </header>
-
-  <!-- PAGE HEADER -->
   <div class="relative z-10 pt-14 pb-10 px-6 text-center border-b border-white/[0.05]"
-       style="background: radial-gradient(ellipse 70% 50% at 50% -5%, rgba(99,102,241,0.12) 0%, transparent 70%);">
-    <p class="text-indigo-400 text-xs font-semibold tracking-widest uppercase mb-3">Legal Document</p>
-    <h1 class="text-4xl sm:text-5xl font-bold text-white tracking-tight mb-3">Terms of Service</h1>
-    <p class="text-slate-500 text-sm">HashSign™ is owned and operated by <strong class="text-slate-300">Exemplar Copy LLC</strong></p>
-    <p class="text-slate-600 text-xs mt-2">Effective Date: July 1, 2026 &nbsp;·&nbsp; Last Updated: October 23, 2026</p>
+       style="background: radial-gradient(ellipse 70% 50% at 50% -5%, rgba(14,165,233,0.12) 0%, transparent 70%);">
+    <p class="text-sky-400 text-xs font-semibold tracking-widest uppercase mb-3">Legal Document</p>
+    <h1 class="text-4xl sm:text-5xl font-bold text-white tracking-tight mb-3">Terms of Use</h1>
+    <p class="text-slate-500 text-sm">Operated by <strong class="text-slate-300">Exemplar Copy LLC d/b/a HashSign</strong></p>
+    <p class="text-slate-600 text-xs mt-2">Effective Date: July 1, 2026 &nbsp;·&nbsp; Last Updated: October 28, 2026</p>
+    <p class="text-slate-500 text-sm mt-3">HashSign version 1.3.0</p>
   </div>
-
-  <!-- CONTENT -->
   <main class="relative z-10 py-16 px-6">
     <div class="max-w-3xl mx-auto">
-
-      <!-- Ownership callout -->
-      <div class="highlight-box mb-8">
-        <p><strong style="color:#7dd3fc;">Important:</strong> HashSign ("the App," "the Service") is wholly owned and operated by <strong style="color:#e2e8f0;">Exemplar Copy LLC</strong>, a limited liability company. All references to "we," "us," "our," "Licensor," and "HashSign" in this Terms of Service refer to Exemplar Copy LLC. "You" and "User" refer to the individual accessing or using the Service.</p>
-      </div>
-
-      <!-- Legal disclaimer callout -->
-      <div class="warning-box mb-10">
-        <p><strong style="color:#fde68a;">Not Legal Advice:</strong> HashSign, its on-device drafting and inspection tools, and its Agent Connectors provide automated document tooling and general information. Exemplar Copy LLC is a technology company, not a law firm. Use of HashSign is not legal representation, and no attorney-client relationship is formed. See Section 6.</p>
-      </div>
-
-      <div class="glass-card rounded-3xl p-8 sm:p-10 legal-content">
-
-        <h2>1. Acceptance of Terms</h2>
-        <p>By downloading, installing, or using the HashSign application or website, you agree to be bound by these Terms of Service ("Terms"), our <a href="/privacy-policy.html">Privacy Policy</a>, and any additional terms referenced herein. If you do not agree to these Terms, do not use the Service.</p>
-        <p>These Terms constitute a legally binding agreement between you and <strong>Exemplar Copy LLC</strong>. Exemplar Copy LLC reserves the right to modify these Terms at any time. Continued use of the Service after changes are posted constitutes acceptance of the revised Terms.</p>
-
-        <h2>2. App License — End User License Agreement (EULA)</h2>
-        <p>The following End User License Agreement governs your use of HashSign on Apple platforms and is required by Apple's App Store Review Guidelines.</p>
-
-        <h3>2.1 License Grant</h3>
-        <p>Subject to your compliance with these Terms and payment of any applicable subscription fees, <strong>Exemplar Copy LLC</strong> grants you a limited, non-exclusive, non-transferable, revocable license to download and use the HashSign application on Apple-branded devices that you own or control, as permitted by Apple's App Store Usage Rules.</p>
-
-        <h3>2.2 Scope of License</h3>
+      <article class="legal-content glass-card rounded-3xl p-7 sm:p-10">
+        <p>These Terms of Use are between you and <strong>Exemplar Copy LLC d/b/a HashSign</strong>, a Texas limited liability company ("HashSign," "we," "us"). They cover the HashSign mobile application and hashsign.app (the "Service").</p>
+        <p><strong>Effective Date:</strong> July 1, 2026   <strong>Last Updated:</strong> October 28, 2026</p>
+        <p>By creating an account or using the Service, you agree to these Terms and to the Privacy Policy at <a href="https://hashsign.app/privacy-policy.html">hashsign.app/privacy-policy.html</a>.</p>
+        <h2>1. The Service</h2>
+        <p>HashSign is a document signing and records product. It lets you draft, inspect, sign, seal, and share documents, and to message other HashSign users. HashSign is not a law firm. Using the Service does not make Exemplar Copy LLC your lawyer.</p>
+        <h2>2. Subscriptions</h2>
+        <p>HashSign Pro Annual is <strong>$79.99 per year</strong>. A monthly plan, when offered, is the price displayed by the Apple App Store or Google Play at the time you subscribe. Taxes may be added by the store.</p>
+        <p>Subscriptions are billed by Apple or Google, not by Exemplar Copy LLC. We do not receive your card number.</p>
         <ul>
-          <li>This license is for your personal, non-commercial use only, unless you hold an active Business or Enterprise subscription.</li>
-          <li>You may not sublicense, sell, resell, transfer, assign, or otherwise commercialize any portion of the App.</li>
-          <li>You may not copy, modify, reverse engineer, decompile, or disassemble the App, in whole or in part.</li>
-          <li>You may not use the App to develop a competing product or service.</li>
+        <li>Payment is charged to your Apple ID or Google Play account at confirmation, or when a free trial ends if you do not cancel first.</li>
+        <li>The subscription renews automatically unless you cancel at least 24 hours before the end of the current period.</li>
+        <li>You can manage and cancel a subscription in your Apple ID or Google Play account settings. Deleting the App does not cancel the subscription.</li>
+        <li>Restore Purchases in the App restores a subscription already paid for on that store account.</li>
         </ul>
-
-        <h3>2.3 Apple's Role</h3>
-        <p>You acknowledge that these Terms are between you and <strong>Exemplar Copy LLC</strong>, and not with Apple Inc. Apple is not responsible for the App or its content. Apple has no obligation whatsoever to furnish any maintenance or support services with respect to the App.</p>
-        <p>In the event of any failure of the App to conform to any applicable warranty, you may notify Apple, and Apple will refund the purchase price (if any) for the App to you. To the maximum extent permitted by applicable law, Apple will have no other warranty obligation with respect to the App.</p>
-        <p>Apple is not responsible for addressing any claims you or any third party have relating to the App or your possession or use of the App, including: (a) product liability claims; (b) any claim that the App fails to conform to any applicable legal or regulatory requirement; and (c) claims arising under consumer protection, privacy, or similar legislation.</p>
-        <p>In the event of any third-party claim that the App or your possession and use of the App infringes that third party's intellectual property rights, <strong>Exemplar Copy LLC</strong>, not Apple, will be solely responsible for the investigation, defense, settlement, and discharge of any such intellectual property infringement claim.</p>
-        <p>Apple and Apple's subsidiaries are third-party beneficiaries of these Terms, and upon your acceptance of these Terms, Apple will have the right (and will be deemed to have accepted the right) to enforce these Terms against you as a third-party beneficiary thereof.</p>
-
-        <h3>2.4 Intellectual Property</h3>
-        <p>HashSign, its logo, all content, features, and functionality are the exclusive property of <strong>Exemplar Copy LLC</strong> and are protected by United States and international copyright, trademark, and other intellectual property laws. Nothing in these Terms transfers ownership of any intellectual property to you.</p>
-
-        <h2>3. Subscriptions and Billing</h2>
-
-        <h3>3.1 Subscription Plans</h3>
-        <p>HashSign offers the following auto-renewing subscription options, processed through Apple's In-App Purchase system:</p>
-
-        <!-- Pricing table -->
-        <div class="rounded-2xl overflow-hidden border border-white/[0.07] my-6" style="background:rgba(255,255,255,0.02)">
-          <div class="pricing-row" style="background:rgba(14,165,233,0.05); border-bottom:1px solid rgba(255,255,255,0.07)">
-            <span class="text-xs font-semibold tracking-widest text-slate-500 uppercase">Plan</span>
-            <span class="text-xs font-semibold tracking-widest text-slate-500 uppercase">Price</span>
-          </div>
-          <div class="pricing-row">
-            <div>
-              <div class="plan-name">Monthly</div>
-              <div class="plan-note">Renews automatically every month</div>
-            </div>
-            <div class="plan-price">$9.99 / month</div>
-          </div>
-          <div class="pricing-row">
-            <div>
-              <div class="plan-name">Annual</div>
-              <div class="plan-note">Renews automatically every year · Save ~17%</div>
-            </div>
-            <div class="plan-price">$99.99 / year</div>
-          </div>
-        </div>
-
-        <h3>3.2 Auto-Renewal Disclosure</h3>
-        <div class="warning-box">
-          <p><strong style="color:#fde68a;">Auto-Renewal Notice:</strong> Subscriptions automatically renew unless cancelled at least 24 hours before the end of the current billing period. Your Apple ID account will be charged for renewal within 24 hours prior to the end of the current period. You can manage and cancel subscriptions in your Apple ID Account Settings at any time.</p>
-        </div>
+        <h2>3. AI features</h2>
+        <p>Draft Contract and Legal Inspect run on your device unless you choose a cloud control.</p>
         <ul>
-          <li>Payment is charged to your Apple ID at confirmation of purchase.</li>
-          <li>The subscription automatically renews at the price and frequency you selected unless you cancel prior to the renewal date.</li>
-          <li>Any unused portion of a free trial period (if offered) will be forfeited when you purchase a subscription.</li>
-          <li>To cancel, go to <strong>Settings → [your name] → Subscriptions → HashSign → Cancel Subscription</strong> on your iPhone or iPad.</li>
-          <li>Cancellation takes effect at the end of the current billing period. You will retain access to paid features until that date.</li>
-          <li>Exemplar Copy LLC does not process refunds directly; all billing disputes are handled by Apple pursuant to Apple's standard refund policy.</li>
+        <li><strong>Cloud boost</strong> (cloud-assisted drafting, also described as Cloud Assist) sends the contract text you submit to our server, which sends it to Google LLC's Gemini API to produce a draft.</li>
+        <li><strong>Deep review</strong> (AI inspection, also described as AI Inspect) sends the contract text, and any file you attach for that review, to the same service to produce an inspection.</li>
         </ul>
-
-        <h3>3.3 Price Changes</h3>
-        <p>Exemplar Copy LLC reserves the right to change subscription pricing. We will provide reasonable notice of any price change via in-app notification or email. Your continued subscription after a price change takes effect constitutes acceptance of the new price.</p>
-
-        <h3>3.4 Free Tier</h3>
-        <p>HashSign may offer a limited free tier with restricted functionality. Exemplar Copy LLC reserves the right to modify or discontinue free tier features at any time without notice.</p>
-
-        <h2>4. Acceptable Use</h2>
-        <p>You agree not to use HashSign to:</p>
-        <ul>
-          <li>Upload documents containing illegal content, or to facilitate fraud, forgery, or any unlawful activity</li>
-          <li>Impersonate another person or entity, or falsify your identity in any document</li>
-          <li>Attempt to circumvent or tamper with the cryptographic signing or hashing mechanisms</li>
-          <li>Engage in automated or bulk document processing beyond your licensed subscription tier</li>
-          <li>Scrape, extract, or harvest data from the Service using automated means</li>
-          <li>Interfere with, disrupt, or overload the Service or any infrastructure connected to it</li>
-          <li>Violate any applicable local, state, national, or international law or regulation</li>
-        </ul>
-        <p>Exemplar Copy LLC reserves the right to suspend or terminate your account for any violation of these Terms without prior notice.</p>
-
-        <h2>5. User Content</h2>
-        <p>You retain ownership of the contracts and messages you create in HashSign. On-device drafting and inspection do not give Exemplar Copy LLC a license to read that content. If you tap Cloud boost or Deep review, you grant Exemplar Copy LLC and Google LLC a limited license to process the text (and any file you attach) solely to produce that result.</p>
-        <p>If you hand a prompt to Grok or Muse, you are sending that prompt to your own account with that third party. That transmission is governed by your agreement with them.</p>
-        <p>You represent and warrant that:</p>
-        <ul>
-          <li>You have the legal right to upload, sign, and process each document you submit through HashSign.</li>
-          <li>Your use of HashSign does not violate any confidentiality obligation, contractual restriction, or applicable law.</li>
-          <li>You will not upload documents or messages containing another person's personal data without a lawful basis.</li>
-          <li>You will not appoint an Electronic Agent to sign a document you do not have authority to sign.</li>
-        </ul>
-
-        <h2>6. No Legal Advice</h2>
-        <div class="danger-box">
-          <p><strong style="color:#f87171;">No attorney-client relationship.</strong> HashSign, its on-device drafting and inspection engines, its optional cloud review, and its Agent Connectors are automated document tools and general information. They are not legal representation or advice from a licensed attorney. No attorney-client relationship is created between you and Exemplar Copy LLC, or between you and any other person, by using HashSign or relying on its output.</p>
-        </div>
-        <ul>
-          <li><strong>Exemplar Copy LLC is a technology company, not a law firm</strong>, and does not provide legal counsel through the App.</li>
-          <li>Drafts, risk scores, clause flags, and imported assistant replies can be wrong, incomplete, or unfit for your facts or jurisdiction.</li>
-          <li>Cloud boost and Deep review, when you request them, are produced with Google's Gemini API. A Grok or Muse reply is produced in your own third-party session. Neither is a lawyer.</li>
-          <li>These tools do not replace a licensed attorney. Consult a qualified attorney before you sign anything with meaningful legal or financial consequences.</li>
-          <li>Exemplar Copy LLC does not warrant that any draft, inspection, risk score, or agent action is accurate, complete, current, or enforceable.</li>
-          <li>Exemplar Copy LLC is not liable for a loss that comes from relying on that output.</li>
-        </ul>
-
-        <h2>7. Authorized Electronic Agents</h2>
-        <p>HashSign can act as an electronic agent only after you turn on Co-Pilot or Auto-Sign and sign an Electronic Agent Mandate. The mandate is identified by an ID in the form <strong>HSM-</strong> followed by the connector code and a short code, for example <strong>HSM-GRK-7Q2M9X</strong>.</p>
-        <div class="warning-box">
-          <p><strong style="color:#fde68a;">Your authorization.</strong> By enabling Co-Pilot or Auto-Sign and executing an Electronic Agent Mandate, you expressly authorize the Electronic Agent you configured to stage or affix your electronic signature, as described below, under the federal ESIGN Act, 15 U.S.C. § 7001(h) and § 7006(3), and the Uniform Electronic Transactions Act § 14. You agree that you are legally bound by a signature the agent affixes within the mandate, until you revoke the mandate.</p>
-        </div>
-        <ul>
-          <li><strong>Co-Pilot</strong> may place your saved signature on a document and stage it for you. Nothing is sealed, and you are not bound by that staged signature, until you tap Approve and Seal.</li>
-          <li><strong>Auto-Sign</strong> may sign and seal on your behalf only when the document is an allowed type, passes every standing guardrail you set, scores at or below your risk threshold, and stays within your dollar exposure cap. Anything outside those limits is returned to you. A signature affixed inside those limits is your signature, and you are bound by that agreement as if you had signed it yourself.</li>
-          <li>Each staged or sealed agent action is written to your Agent Activity log and marked as executed through an Authorized Electronic Agent, with the mandate ID.</li>
-          <li>You may change your rules, switch to Observer, or revoke the mandate at any time in Agent Connectors. Revocation stops further signing immediately. It does not undo a document already sealed.</li>
-          <li>You are responsible for the rules, caps, and signature on file. An agent will follow the mandate you signed, including a mandate that is broader than you later wish it had been.</li>
-          <li>Whether a particular signature is enforceable still depends on the agreement, the parties, and the law of the place that governs it. The citations above describe the authorization you give. They are not a guarantee of outcome in every court.</li>
-        </ul>
-
-        <h2>8. Third-Party Trademarks and Interoperability</h2>
-        <p>Grok Connector and Muse Connector are independent interoperability connectors. A connector opens your own session, or copies a prompt for you to paste there. It is not a partnership, endorsement, or joint product.</p>
-        <div class="highlight-box">
-          <p>Grok Connector and Muse Connector are independent interoperability connectors. HashSign is not affiliated with, endorsed by, or sponsored by xAI, Meta, Anthropic, OpenAI, or Google. Claude, ChatGPT, Gemini, Grok, Muse, and all other third-party product names and trademarks belong to their respective owners.</p>
-        </div>
-        <p>HashSign version 1.2.0 ships the Grok Connector and the Muse Connector. It does not include a Claude, ChatGPT, or Gemini connector. Gemini is used only inside the optional Cloud boost and Deep review described in the Privacy Policy, which is HashSign's own cloud review, not a Gemini connector.</p>
-
-        <h2>9. Blockchain and Cryptographic Signing</h2>
-        <p>A sealed HashSign document is hashed with SHA-384. That digest may be anchored on the Hedera network. The file also carries an ML-DSA (post-quantum) signature computed on your device. You acknowledge:</p>
-        <ul>
-          <li>A Hedera record is <strong>permanent</strong>. Exemplar Copy LLC cannot delete or alter it.</li>
-          <li>An anchor is strong evidence that a particular file existed at a time. It does not, by itself, decide whether the agreement is valid or admissible. That depends on the jurisdiction and the facts.</li>
-          <li>You are responsible for the device that holds your signing keys. If you lose the device and have no backup, Exemplar Copy LLC cannot recreate that key.</li>
-        </ul>
-
-        <h2>10. Disclaimers of Warranties</h2>
-        <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, HASHSIGN AND ALL CONTENT, FEATURES, AND SERVICES ARE PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, NON-INFRINGEMENT, AND ACCURACY.</p>
-        <p>EXEMPLAR COPY LLC DOES NOT WARRANT THAT THE SERVICE WILL BE UNINTERRUPTED, ERROR-FREE, COMPLETELY SECURE, OR THAT DEFECTS WILL BE CORRECTED.</p>
-
-        <h2>11. Limitation of Liability</h2>
-        <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, EXEMPLAR COPY LLC, ITS OFFICERS, DIRECTORS, EMPLOYEES, AND AGENTS SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, PUNITIVE, OR EXEMPLARY DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS, LOSS OF DATA, LOSS OF GOODWILL, OR LOSS OF BUSINESS OPPORTUNITY, ARISING OUT OF OR IN CONNECTION WITH YOUR USE OF OR INABILITY TO USE HASHSIGN, INCLUDING A SIGNATURE AFFIXED BY AN ELECTRONIC AGENT UNDER A MANDATE YOU AUTHORIZED.</p>
-        <p>IN NO EVENT SHALL EXEMPLAR COPY LLC'S TOTAL CUMULATIVE LIABILITY TO YOU EXCEED THE GREATER OF: (A) THE AMOUNT YOU PAID TO EXEMPLAR COPY LLC IN THE TWELVE (12) MONTHS PRECEDING THE CLAIM, OR (B) ONE HUNDRED U.S. DOLLARS ($100.00).</p>
-        <p>Some jurisdictions do not allow the exclusion or limitation of certain warranties or liabilities. In those jurisdictions, the limitations above apply to the fullest extent the law allows.</p>
-
-        <h2>12. Indemnification</h2>
-        <p>You agree to defend, indemnify, and hold harmless Exemplar Copy LLC and its officers, directors, employees, contractors, and agents from and against any claims, damages, losses, costs, and expenses (including reasonable legal fees) arising out of or relating to: (a) your use of the Service; (b) your violation of these Terms; (c) your violation of any third-party right; (d) any document you process through HashSign; or (e) a signature your Electronic Agent affixes under a mandate you authorized.</p>
-
-        <h2>13. Termination</h2>
-        <p>Exemplar Copy LLC may suspend or terminate your access to HashSign at any time, with or without cause, and with or without notice. Upon termination, the license granted under Section 2 ends. Sections 6, 7, 8, 9, 10, 11, 12, 14, and 15 survive termination. A mandate you already used to seal a document, and any Hedera record, survive as well.</p>
-
-        <h2>14. Governing Law and Dispute Resolution</h2>
-        <p>These Terms are governed by the laws of the State of Delaware, United States, without regard to its conflict of law provisions.</p>
-        <p>Any dispute arising from these Terms or your use of HashSign shall be resolved through binding individual arbitration under the rules of the American Arbitration Association. <strong>You waive any right to a jury trial and to participate in a class or representative proceeding.</strong></p>
-        <p>Either party may seek injunctive or other equitable relief in a court of competent jurisdiction for intellectual property or unauthorized access.</p>
-
-        <h2>15. General Provisions</h2>
-        <ul>
-          <li><strong>Entire agreement:</strong> These Terms, together with the Privacy Policy, are the entire agreement between you and Exemplar Copy LLC about the Service.</li>
-          <li><strong>Severability:</strong> If a provision is held invalid, it is limited to the minimum extent necessary and the rest stays in force.</li>
-          <li><strong>Waiver:</strong> A failure to enforce a provision is not a waiver.</li>
-          <li><strong>Assignment:</strong> You may not assign these Terms without Exemplar Copy LLC's prior written consent. Exemplar Copy LLC may assign them.</li>
-          <li><strong>Force majeure:</strong> Exemplar Copy LLC is not liable for a delay caused by events beyond its reasonable control.</li>
-        </ul>
-
-        <h2>16. Contact Information</h2>
-        <p>Questions about these Terms:</p>
-        <ul>
-          <li><strong>Email:</strong> <a href="mailto:legal@hashsign.app">legal@hashsign.app</a></li>
-          <li><strong>Support:</strong> <a href="mailto:support@hashsign.app">support@hashsign.app</a></li>
-          <li><strong>Company:</strong> Exemplar Copy LLC</li>
-        </ul>
-
-      </div><!-- /glass-card -->
+        <p>Those controls run only after you tap them. Exemplar Copy LLC does not use your documents, prompts, or messages to train public foundational AI models.</p>
+        <p><strong>No legal advice.</strong> Cloud boost, Deep review, on-device drafting, and on-device inspection are automated informational tools. Their output is not legal advice, is not a recommendation to sign or not sign, and does not create an attorney-client relationship with Exemplar Copy LLC or anyone else. Have a lawyer review any document that matters to you.</p>
+        <h2>4. Messages and documents</h2>
+        <p>From HashSign version 1.3.0, 1:1 direct messages are end-to-end encrypted on your device with X25519 and AES-256-GCM before they are stored. Private keys stay in Apple iCloud Keychain or the Android Keystore. HashSign's servers do not have those private keys or the message plaintext.</p>
+        <p>Deal Room messages are not end-to-end encrypted. Vault documents are not end-to-end encrypted. Both are protected by TLS in transit and encryption at rest. A sealed document can carry an on-device post-quantum signature and a SHA-384 digest anchored to the Hedera Consensus Service. That anchor is the digest, not the document, and HashSign cannot delete a digest that has already been written to the ledger.</p>
+        <p>Messages sent before version 1.3.0 were not end-to-end encrypted.</p>
+        <h2>5. Your account</h2>
+        <p>You are responsible for the activity on your account and for the documents you upload or sign. Do not use the Service to break the law, to impersonate someone else, or to upload malware.</p>
+        <h2>6. Contact</h2>
+        <p>Exemplar Copy LLC d/b/a HashSign   privacy@hashsign.app   support@hashsign.app</p>
+        <h2>7. Biometric Face Signature and US ID Verification</h2>
+        <p>Biometric Face Signature and US Verified ID are part of the <strong>$79.99 per year</strong> HashSign Pro plan and are available only for United States signers.</p>
+        <p>You must check the biometric consent box before HashSign opens the camera or a biometric prompt. The checkbox is not pre-checked. Facial images and ID photos are processed on your device and deleted immediately. HashSign does not sell, lease, or use them to train AI models. The stored record is a SHA-384 commitment, a consent timestamp, and a redacted ID attestation.</p>
+        <p>A Pro subscriber can require a face signature on a document they send. The invited signer can complete that signature without their own Pro subscription. Turning the requirement on, and verifying your own ID from Settings, require Pro.</p>
+        <p>If this device does not have your end-to-end encryption key, you can reset it in Settings. New messages use the new key. Older encrypted messages from the previous device remain unreadable here.</p>
+        <h2>8. Biometric privacy</h2>
+        <p>This section is the biometric notice for the Texas Capture or Use of Biometric Identifier Act and the Illinois Biometric Information Privacy Act, as they apply to a US signer who opts in. The purpose is identity proofing and non-repudiation under ESIGN and UETA. The retention of raw frames is immediate destruction. The retention of the cryptographic commitment is the life of the signature record. Contact privacy@hashsign.app with questions.</p>
+        <p>© Exemplar Copy LLC d/b/a HashSign. All rights reserved.</p>
+      </article>
     </div>
   </main>
-
-  <!-- FOOTER -->
   <footer class="relative z-10 border-t border-white/[0.06] py-8 px-6">
     <div class="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
       <div class="flex items-center gap-3">
-        <img src="logo.jpeg" alt="HashSign™"
-             class="h-8 w-auto rounded-xl shadow-md shadow-black/50" />
-        <span class="text-sm text-slate-600">&copy; 2026 HashSign™ · Exemplar Copy LLC. All rights reserved.</span>
+        <img src="/logo.jpeg" alt="HashSign™" class="h-8 w-auto rounded-xl shadow-md shadow-black/50" />
+        <span class="text-sm text-slate-600">&copy; 2026 Exemplar Copy LLC d/b/a HashSign. All rights reserved.</span>
       </div>
       <nav class="flex items-center gap-6">
-        <a href="/privacy-policy.html" class="text-sm text-slate-400 hover:text-white transition-colors">Privacy Policy</a>
-        <a href="/terms-of-service.html" class="text-sm text-indigo-400 font-medium">Terms of Service</a>
+        <a href="/privacy-policy.html" class="text-sm text-sky-400 font-medium">Privacy Policy</a>
+        <a href="/terms-of-service.html" class="text-sm text-slate-400 hover:text-white transition-colors">Terms of Use</a>
         <a href="mailto:support@hashsign.app" class="text-sm text-slate-400 hover:text-white transition-colors">Support</a>
       </nav>
     </div>
   </footer>
-
 </body>
 </html>
