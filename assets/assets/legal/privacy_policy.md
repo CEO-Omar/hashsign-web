@@ -3,7 +3,7 @@
 HashSign is operated by Exemplar Copy LLC d/b/a HashSign, a Texas limited liability company.
 
 **Effective Date:** July 1, 2026  
-**Last Updated:** October 28, 2026
+**Last Updated:** October 29, 2026
 
 **Important:** HashSign ("the App," "the Service") is operated by Exemplar Copy LLC d/b/a HashSign ("Exemplar Copy LLC"), a Texas limited liability company. All references to "we," "us," "our," and "HashSign" in this Privacy Policy refer to Exemplar Copy LLC d/b/a HashSign.
 
@@ -15,7 +15,7 @@ This Privacy Policy explains what information we collect, how we use it, and wha
 
 If you have questions or concerns, please contact us at [privacy@hashsign.app](mailto:privacy@hashsign.app).
 
-This version describes the data practices of HashSign version 1.3.0, including end-to-end encrypted 1:1 messages, on-device contract tooling, optional cloud review, Agent Connectors, profile photos, and Deal Rooms.
+This version describes the data practices of HashSign version 1.4.0, including end-to-end encrypted 1:1 messages, on-device contract tooling, optional cloud review, Agent Connectors, profile photos, and Deal Rooms.
 
 ## 2. Information We Collect
 

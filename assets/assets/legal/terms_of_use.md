@@ -3,7 +3,7 @@
 These Terms of Use are between you and **Exemplar Copy LLC d/b/a HashSign**, a Texas limited liability company ("HashSign," "we," "us"). They cover the HashSign mobile application and hashsign.app (the "Service").
 
 **Effective Date:** July 1, 2026  
-**Last Updated:** October 28, 2026
+**Last Updated:** October 29, 2026
 
 By creating an account or using the Service, you agree to these Terms and to the Privacy Policy at [hashsign.app/privacy-policy.html](https://hashsign.app/privacy-policy.html).
 
