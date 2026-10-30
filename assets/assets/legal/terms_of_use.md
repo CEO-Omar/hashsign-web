@@ -9,11 +9,11 @@ By creating an account or using the Service, you agree to these Terms and to the
 
 ## 1. The Service
 
-HashSign is a document signing and records product. It lets you draft, inspect, sign, seal, and share documents, and to message other HashSign users. HashSign is not a law firm. Using the Service does not make Exemplar Copy LLC your lawyer.
+HashSign is a document signing and records product. It lets you draft, inspect, sign, seal, and share documents, and to message other HashSign users. HashSign is not a law firm and not a licensed notary. It does not replace a licensed notary. Using the Service does not make Exemplar Copy LLC your lawyer.
 
 ## 2. Subscriptions
 
-HashSign Pro Annual is **$79.99 per year**. A monthly plan, when offered, is the price displayed by the Apple App Store or Google Play at the time you subscribe. Taxes may be added by the store.
+HashSign has a free tier. Hedera anchoring is a paid feature. Any paid feature is billed by Apple or Google at the price shown in that store when you subscribe. This page does not list prices. Taxes may be added by the store.
 
 Subscriptions are billed by Apple or Google, not by Exemplar Copy LLC. We do not receive your card number.
 
@@ -26,7 +26,7 @@ Subscriptions are billed by Apple or Google, not by Exemplar Copy LLC. We do not
 
 Draft Contract and Legal Inspect run on your device unless you choose a cloud control.
 
-- **Cloud boost** (cloud-assisted drafting, also described as Cloud Assist) sends the contract text you submit to our server, which sends it to Google LLC's Gemini API to produce a draft.
+- **Cloud boost** (cloud-assisted drafting, also described as Cloud Assist) sends the contract text you submit to our server, which uses HashSign AI to produce a draft.
 - **Deep review** (AI inspection, also described as AI Inspect) sends the contract text, and any file you attach for that review, to the same service to produce an inspection.
 
 Those controls run only after you tap them. Exemplar Copy LLC does not use your documents, prompts, or messages to train public foundational AI models.
@@ -35,11 +35,11 @@ Those controls run only after you tap them. Exemplar Copy LLC does not use your 
 
 ## 4. Messages and documents
 
-From HashSign version 1.3.0, 1:1 direct messages are end-to-end encrypted on your device with X25519 and AES-256-GCM before they are stored. Private keys stay in Apple iCloud Keychain or the Android Keystore. HashSign's servers do not have those private keys or the message plaintext.
+From HashSign version 1.3.0, 1:1 direct messages are encrypted on your device before they are stored. Private keys stay in Apple iCloud Keychain or the Android Keystore. HashSign's servers do not have those private keys or the message plaintext.
 
-Deal Room messages are not end-to-end encrypted. Vault documents are not end-to-end encrypted. Both are protected by TLS in transit and encryption at rest. A sealed document can carry an on-device post-quantum signature and a SHA-384 digest anchored to the Hedera Consensus Service. That anchor is the digest, not the document, and HashSign cannot delete a digest that has already been written to the ledger.
+Deal Room messages and Vault documents are protected by TLS in transit and encryption at rest. That protection is separate from 1:1 encrypted messaging. A sealed document can carry an on-device post-quantum signature and a SHA-384 digest anchored to the Hedera Consensus Service. That anchor is the digest, not the document, and HashSign cannot delete a digest that has already been written to the ledger.
 
-Messages sent before version 1.3.0 were not end-to-end encrypted.
+Messages sent before version 1.3.0 were not encrypted on the device before they were stored.
 
 ## 5. Your account
 
@@ -53,13 +53,13 @@ support@hashsign.app
 
 ## 7. Biometric Face Signature and US ID Verification
 
-Biometric Face Signature and US Verified ID are part of the **$79.99 per year** HashSign Pro plan and are available only for United States signers.
+Biometric Face Signature and US ID Verification are available only for United States signers. Face Signature is US-only.
 
 You must check the biometric consent box before HashSign opens the camera or a biometric prompt. The checkbox is not pre-checked. Facial images and ID photos are processed on your device and deleted immediately. HashSign does not sell, lease, or use them to train AI models. The stored record is a SHA-384 commitment, a consent timestamp, and a redacted ID attestation.
 
-A Pro subscriber can require a face signature on a document they send. The invited signer can complete that signature without their own Pro subscription. Turning the requirement on, and verifying your own ID from Settings, require Pro.
+The sender can require a face signature on a document they send. An invited signer in the United States can complete that signature.
 
-If this device does not have your end-to-end encryption key, you can reset it in Settings. New messages use the new key. Older encrypted messages from the previous device remain unreadable here.
+If this device does not have your encryption key, you can reset it in Settings. New messages use the new key. Older encrypted messages from the previous device remain unreadable here.
 
 ## 8. Biometric privacy
 

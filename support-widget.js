@@ -1,7 +1,7 @@
 /* HashSign Support widget. Posts to /api/support-bot, then the Cloud
  * Function URL, then answers from the on-page knowledge base. */
 (function () {
-  var SUPPORT_EMAIL = "CEO@exemplarcopy.com";
+  var SUPPORT_EMAIL = "support@hashsign.app";
   var ASK_ENDPOINTS = [
     "/api/support-bot",
     "https://us-central1-suresign-c12ca.cloudfunctions.net/webSupportBot",
@@ -12,7 +12,7 @@
     "https://us-central1-suresign-c12ca.cloudfunctions.net/webSupportBot",
   ];
   var STARTERS = [
-    "How does HashSign Pro ($79.99/yr) work?",
+    "What is included in the free tier?",
     "Fix 'Unable to decrypt' on a new phone",
     "How US Face Signature & ID Verification work",
     "How to verify a Hedera SHA-384 proof",
@@ -35,26 +35,26 @@
   function localAnswer(question) {
     var text = String(question || "").toLowerCase();
     var escalation = /refund|billing|bug|crash|human|agent|representative/.test(text);
-    var reply = "HashSign is operated by Exemplar Copy LLC d/b/a HashSign. Pro is $79.99/year. HashSign is a software platform, not a law firm. Email " + SUPPORT_EMAIL + " for a person.";
+    var reply = "HashSign is operated by Exemplar Copy LLC d/b/a HashSign. There is a free tier. Hedera anchoring is a paid feature. HashSign is a software platform, not a law firm and not a licensed notary. Email " + SUPPORT_EMAIL + " for a person.";
     var topic = "general";
     if (/unable to decrypt|encryption key|new phone|reinstall|x25519/.test(text)) {
-      topic = "e2ee_reset";
-      reply = "1:1 chats use X25519, HKDF-SHA256, and AES-256-GCM. Private keys stay on the device. If you see \"Unable to decrypt message on this device\", open Settings → Reset Encryption Key on This Device, or tap the banner in chat. Older messages from the previous device stay unreadable. New messages work after the reset.";
+      topic = "key_reset";
+      reply = "1:1 messages are encrypted on the device before they are stored. Private keys stay on the device. If you see \"Unable to decrypt message on this device\", open Settings and reset the encryption key on this device, or tap the banner in chat. Older messages from the previous device stay unreadable. New messages work after the reset.";
     } else if (/sender pays|counterparty|for free|invited/.test(text)) {
       topic = "sender_pays";
-      reply = "Only the sender needs HashSign Pro ($79.99/year) to require a Biometric Face Signature. An invited signer in the United States can complete that required Face Signature for free.";
+      reply = "Face Signature is US-only. An invited signer in the United States can complete a required Face Signature. Hedera anchoring is a paid feature.";
     } else if (/deal room/.test(text)) {
       topic = "deal_rooms";
-      reply = "Deal Rooms use TLS in transit and cloud storage so newly invited counterparties can review shared history. 1:1 chats are end-to-end encrypted. Deal Rooms are not.";
+      reply = "Deal Rooms use TLS in transit and cloud storage so newly invited counterparties can review shared history. 1:1 chats are encrypted messaging. Deal Rooms are stored for room members.";
     } else if (/face signature|id verification|bipa|cubi|biometric|passport/.test(text)) {
       topic = "biometrics";
       reply = "US Face Signature and ID Verification are for United States signers only (Texas CUBI and Illinois BIPA). Consent is collected first. Raw frames and ID photos are wiped on the device and are not uploaded. The record is SHA-384(documentSha384|docId|signerUid|livenessFrameHash|timestamp) on Hedera Consensus Service.";
     } else if (/hedera|sha-?384|proof|anchor/.test(text)) {
       topic = "hedera";
       reply = "A sealed document anchors a SHA-384 digest of the finished PDF, not the file, to Hedera Consensus Service. Compare the digest in the audit trail with the hash of the PDF you hold.";
-    } else if (/79\.99|\bpro\b|subscription|restore purchase|cancel/.test(text)) {
-      topic = "pro";
-      reply = "HashSign Pro is $79.99/year. It unlocks unlimited document preparation, US Biometric Face Signature, US Government ID Verification, and Pro templates. Tap Restore Purchases on the Paywall or in Settings. Cancel in iOS Settings → Apple ID → Subscriptions, or Google Play → Payments & subscriptions.";
+    } else if (/subscription|restore purchase|cancel|free tier|paid/.test(text)) {
+      topic = "subscription";
+      reply = "HashSign has a free tier. Hedera anchoring is a paid feature. Paid features are billed by the App Store or Google Play at the price shown there. Restore a purchase in the app. Cancel in your Apple ID or Google Play subscription settings.";
     } else if (/legal advice|lawyer|attorney|should i sign/.test(text)) {
       topic = "legal";
       reply = "HashSign is a software platform operated by Exemplar Copy LLC d/b/a HashSign, not a law firm. This assistant cannot give legal advice.";
@@ -171,7 +171,7 @@
     var questionInput = document.createElement("input");
     questionInput.name = "question";
     questionInput.maxLength = 500;
-    questionInput.placeholder = "Ask about Pro, encryption, or ID checks";
+    questionInput.placeholder = "Ask about signing, encryption, or ID checks";
     questionInput.setAttribute("aria-label", "Support question");
     var askSubmit = el("button", null, "Send");
     askSubmit.type = "submit";
@@ -204,7 +204,7 @@
       if (transcript.length > 20) transcript.shift();
     }
 
-    addBubble("assistant", "Ask about HashSign Pro ($79.99/year), encrypted chats, or US face signature. HashSign is a software platform, not a law firm.");
+    addBubble("assistant", "Ask about encrypted messaging, US Face Signature, or a Hedera SHA-384 proof. HashSign is a software platform, not a law firm and not a licensed notary.");
 
     function ask(question) {
       var trimmed = String(question || "").trim();

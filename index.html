@@ -6,58 +6,20 @@
   <link rel="icon" href="/favicon.ico?v=2" sizes="64x64" />
   <link rel="icon" type="image/png" href="/favicon.png?v=2" />
   <link rel="apple-touch-icon" href="/icons/Icon-192.png?v=2" />
-  <title>HashSign™ — Draft, Inspect, and Seal</title>
-  <meta name="description" content="HashSign 1.4.0 drafts and seals agreements on your device, with end-to-end encrypted 1:1 messaging, biometric face signature, and US government ID verification. HashSign Pro is $79.99/year from Exemplar Copy LLC d/b/a HashSign." />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              50:  '#f0f9ff',
-              400: '#38bdf8',
-              500: '#0ea5e9',
-              600: '#0284c7',
-              900: '#0c4a6e',
-            },
-            surface: {
-              900: '#080c14',
-              800: '#0d1220',
-              700: '#111827',
-              600: '#1a2235',
-              500: '#243047',
-            }
-          },
-          fontFamily: {
-            sans: ['-apple-system', 'BlinkMacSystemFont', '"SF Pro Display"', '"Segoe UI"', 'sans-serif'],
-          },
-          backgroundImage: {
-            'grid-pattern': "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cpath d='M 60 0 L 0 0 0 60' fill='none' stroke='%230ea5e920' stroke-width='1'/%3E%3C/svg%3E\")",
-          },
-          animation: {
-            'fade-up': 'fadeUp 0.7s ease forwards',
-            'glow-pulse': 'glowPulse 3s ease-in-out infinite',
-            'shimmer': 'shimmer 2.5s linear infinite',
-          },
-          keyframes: {
-            fadeUp: {
-              '0%':   { opacity: '0', transform: 'translateY(24px)' },
-              '100%': { opacity: '1', transform: 'translateY(0)' },
-            },
-            glowPulse: {
-              '0%, 100%': { boxShadow: '0 0 20px 4px rgba(14,165,233,0.15)' },
-              '50%':       { boxShadow: '0 0 40px 8px rgba(14,165,233,0.30)' },
-            },
-            shimmer: {
-              '0%':   { backgroundPosition: '-200% center' },
-              '100%': { backgroundPosition: '200% center' },
-            },
-          }
-        }
-      }
-    }
-  </script>
+  <title>HashSign | Document Signing and Notarization</title>
+  <meta name="description" content="Texas-based, veteran-owned signing app. HashSign AI flags risky clauses. Tamper-evident SHA-384 records. Free to start; Hedera anchoring is paid." />
+  <link rel="canonical" href="https://hashsign.app/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="HashSign" />
+  <meta property="og:title" content="HashSign | Document Signing and Notarization" />
+  <meta property="og:description" content="Texas-based, veteran-owned signing app. HashSign AI flags risky clauses. Tamper-evident SHA-384 records. Free to start; Hedera anchoring is paid." />
+  <meta property="og:url" content="https://hashsign.app/" />
+  <meta property="og:image" content="https://hashsign.app/og.webp" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="HashSign | Document Signing and Notarization" />
+  <meta name="twitter:description" content="Texas-based, veteran-owned signing app. HashSign AI flags risky clauses. Tamper-evident SHA-384 records. Free to start; Hedera anchoring is paid." />
+  <meta name="twitter:image" content="https://hashsign.app/og.webp" />
+  <link rel="stylesheet" href="/site.css" />
   <style>
     html { color-scheme: dark; }
     body { background-color: #080c14; color: #e2e8f0; }
@@ -140,7 +102,6 @@
 
     /* Official store badges, locked to the same height in every slot. */
     .store-badges {
-      display: flex;
       flex-wrap: wrap;
       align-items: center;
       gap: 0.75rem;
@@ -181,6 +142,27 @@
       z-index: 0;
     }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "HashSign",
+        "url": "https://hashsign.app/",
+        "logo": "https://hashsign.app/logo.webp",
+        "email": "support@hashsign.app"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "HashSign",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "iOS, Android",
+        "url": "https://hashsign.app/"
+      }
+    ]
+  }
+  </script>
 </head>
 <body class="text-slate-200 font-sans antialiased overflow-x-hidden">
 
@@ -189,7 +171,7 @@
     <nav class="max-w-6xl mx-auto px-6 py-4 flex flex-wrap items-center justify-between gap-x-6 gap-y-3">
       <!-- Logo -->
       <a href="#" class="order-1 flex shrink-0 items-center gap-2.5 group">
-        <img src="logo.jpeg" alt="HashSign™"
+        <img src="/logo.webp" alt="HashSign logo" width="40" height="40"
              class="h-10 w-auto rounded-2xl shadow-lg shadow-black/50 group-hover:shadow-sky-500/25 transition-shadow duration-300" />
         <span class="font-semibold text-white tracking-tight text-[15px]">HashSign™</span>
       </a>
@@ -206,7 +188,7 @@
       <!-- Open App stays on the first row. Badges sit beside it from xl up,
            and on their own centered row below that so nothing overflows. -->
       <div class="order-3 flex items-center gap-3">
-        <div class="store-badges hidden xl:flex">
+        <div class="store-badges flex hidden xl:flex">
           <a class="store-badge" href="https://apps.apple.com/app/id6789818701" target="_blank" rel="noopener noreferrer">
             <img src="badges/app-store.svg" alt="Download on the App Store" width="120" height="40" />
           </a>
@@ -222,7 +204,7 @@
           </svg>
         </a>
       </div>
-      <div class="store-badges order-4 basis-full justify-center xl:hidden">
+      <div class="store-badges flex order-4 basis-full justify-center xl:hidden">
         <a class="store-badge" href="https://apps.apple.com/app/id6789818701" target="_blank" rel="noopener noreferrer">
           <img src="badges/app-store.svg" alt="Download on the App Store" width="120" height="40" />
         </a>
@@ -241,23 +223,21 @@
     <!-- Badge -->
     <div class="reveal inline-flex items-center gap-2 px-4 py-1.5 rounded-full trust-pill text-sky-400 text-xs font-medium mb-8 mx-auto">
       <span class="w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse"></span>
-      Version 1.4.0 · Pro $79.99/year · App Store and Google Play
+      Texas-based, veteran-owned
     </div>
 
     <!-- Headline -->
-    <h1 class="reveal max-w-3xl mx-auto text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight leading-[1.05] text-white mb-6"
+    <h1 class="reveal max-w-3xl mx-auto text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-[1.1] text-white mb-6"
         style="animation-delay:0.1s">
-      Draft, inspect, and seal.<br class="hidden sm:block" />
-      <span class="text-shimmer">On your terms.</span>
+      Sign documents with a tamper-evident SHA-384 record
     </h1>
 
     <!-- Sub-headline -->
     <p class="reveal max-w-2xl mx-auto text-lg text-slate-400 leading-relaxed mb-10" style="animation-delay:0.2s">
-      HashSign™ 1.4.0 writes an NDA, MSA, letter of intent, or bill of sale
-      <strong class="text-slate-200 font-medium">on your phone</strong>,
-      for up to five parties. 1:1 messages are end-to-end encrypted.
-      United States signers on HashSign Pro can add a biometric face signature
-      and verify a US government ID. Pro is <strong class="text-slate-200 font-medium">$79.99/year</strong>.
+      HashSign AI flags risky clauses, and sealed PDFs get a tamper-evident SHA-384 record.
+      Start free; Hedera anchoring is a paid feature.
+      The document stays on your device until you send or share it.
+      HashSign is not a licensed notary and does not replace one.
     </p>
 
     <!-- CTA group -->
@@ -278,7 +258,7 @@
       </a>
     </div>
 
-    <div class="reveal store-badges justify-center mt-6" style="animation-delay:0.35s">
+    <div class="reveal store-badges flex justify-center mt-6" style="animation-delay:0.35s">
       <a class="store-badge" href="https://apps.apple.com/app/id6789818701" target="_blank" rel="noopener noreferrer">
         <img src="badges/app-store.svg" alt="Download on the App Store" width="120" height="40" />
       </a>
@@ -356,12 +336,12 @@
   <!-- ═══════════════════════ TRUST BANNER ═══════════════════════ -->
   <div class="relative z-10 border-y border-white/[0.06] bg-surface-800/50 py-5 overflow-hidden">
     <div class="max-w-5xl mx-auto px-6 flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
-      <p class="text-xs uppercase tracking-widest text-slate-500 font-medium">Version 1.4.0</p>
-      <span class="text-sm font-semibold text-slate-300">E2EE 1:1 chat</span>
+      <p class="text-xs uppercase tracking-widest text-slate-500 font-medium">iOS and Android</p>
+      <span class="text-sm font-semibold text-slate-300">Encrypted messaging</span>
       <span class="hidden sm:inline text-slate-700" aria-hidden="true">/</span>
       <span class="text-sm font-semibold text-slate-300">On-device drafting</span>
       <span class="hidden sm:inline text-slate-700" aria-hidden="true">/</span>
-      <span class="text-sm font-semibold text-slate-300">Grok &amp; Muse connectors</span>
+      <span class="text-sm font-semibold text-slate-300">HashSign AI</span>
       <span class="hidden sm:inline text-slate-700" aria-hidden="true">/</span>
       <span class="text-sm font-semibold text-slate-300">SHA-384 + ML-DSA</span>
       <span class="hidden sm:inline text-slate-700" aria-hidden="true">/</span>
@@ -375,7 +355,7 @@
 
       <!-- Section header -->
       <div class="reveal text-center mb-16">
-        <p class="text-sky-400 text-sm font-semibold tracking-widest uppercase mb-3">Version 1.4.0 · Pro $79.99/year</p>
+        <p class="text-sky-400 text-sm font-semibold tracking-widest uppercase mb-3">Free to start</p>
         <h2 class="text-4xl sm:text-5xl font-bold text-white tracking-tight">The agreement, the rules,<br class="hidden sm:block"/> and the seal.</h2>
       </div>
 
@@ -386,12 +366,12 @@
           <div class="w-12 h-12 rounded-2xl bg-indigo-500/15 border border-indigo-400/25 flex items-center justify-center shrink-0"><svg class="w-6 h-6 text-indigo-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg></div>
           <div>
             <h3 class="text-xl font-semibold text-white mb-2">Agent Connectors</h3>
-            <p class="text-slate-400 leading-relaxed text-[15px]">Grok Connector and Muse Connector apply the standing guardrails you set, then hand the prompt to your own account. One tap opens Grok. Muse copies a prompt you paste into your own session. HashSign reads the clipboard only when you tap Import.</p>
+            <p class="text-slate-400 leading-relaxed text-[15px]">Optional assistant handoffs apply the standing guardrails you set, then hand the prompt to a session you control. HashSign reads the clipboard only when you tap Import.</p>
           </div>
           <ul class="space-y-2.5 mt-auto">
             <li class="flex items-start gap-2.5 text-sm text-slate-300"><span class="text-indigo-300 mt-0.5"><svg class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span>Standing guardrails you configure</span></li>
             <li class="flex items-start gap-2.5 text-sm text-slate-300"><span class="text-indigo-300 mt-0.5"><svg class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span>On-device clause audit before anyone signs</span></li>
-            <li class="flex items-start gap-2.5 text-sm text-slate-300"><span class="text-indigo-300 mt-0.5"><svg class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span>Handoff to your own Grok or Muse account</span></li>
+            <li class="flex items-start gap-2.5 text-sm text-slate-300"><span class="text-indigo-300 mt-0.5"><svg class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span>Handoff to a session you control</span></li>
           </ul>
         </div>
 
@@ -399,11 +379,11 @@
           <div class="w-12 h-12 rounded-2xl bg-emerald-500/15 border border-emerald-400/25 flex items-center justify-center shrink-0"><svg class="w-6 h-6 text-emerald-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg></div>
           <div>
             <h3 class="text-xl font-semibold text-white mb-2">Co-Pilot and policy Auto-Sign</h3>
-            <p class="text-slate-400 leading-relaxed text-[15px]">Co-Pilot stages your saved signature for a one-tap seal. Auto-Sign seals only when the agreement is an allowed type, clears every standing rule, and stays inside the risk score and dollar cap you set. Each grant is an Electronic Agent Mandate with an HSM- ID.</p>
+            <p class="text-slate-400 leading-relaxed text-[15px]">Co-Pilot stages your saved signature for a one-tap seal. Auto-Sign seals only when the agreement is an allowed type, clears every standing rule, and stays inside the risk score and exposure cap you set. Each grant is an Electronic Agent Mandate with an HSM- ID.</p>
           </div>
           <ul class="space-y-2.5 mt-auto">
             <li class="flex items-start gap-2.5 text-sm text-slate-300"><span class="text-emerald-300 mt-0.5"><svg class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span>One-tap staged signatures</span></li>
-            <li class="flex items-start gap-2.5 text-sm text-slate-300"><span class="text-emerald-300 mt-0.5"><svg class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span>Risk score and dollar exposure caps</span></li>
+            <li class="flex items-start gap-2.5 text-sm text-slate-300"><span class="text-emerald-300 mt-0.5"><svg class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span>Risk score and exposure caps you set</span></li>
             <li class="flex items-start gap-2.5 text-sm text-slate-300"><span class="text-emerald-300 mt-0.5"><svg class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span>SHA-384 anchor and ML-DSA audit trail</span></li>
           </ul>
         </div>
@@ -425,12 +405,12 @@
           <div class="w-12 h-12 rounded-2xl bg-violet-500/15 border border-violet-400/25 flex items-center justify-center shrink-0"><svg class="w-6 h-6 text-violet-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"/></svg></div>
           <div>
             <h3 class="text-xl font-semibold text-white mb-2">Profile photos and Deal Rooms</h3>
-            <p class="text-slate-400 leading-relaxed text-[15px]">Add a profile photo, cropped on your phone, next to your @handle. A Deal Room is one conversation for the signing group and the documents in the deal. HashSign Pro members show a verified badge beside their handle.</p>
+            <p class="text-slate-400 leading-relaxed text-[15px]">Add a profile photo, cropped on your phone, next to your @handle. A Deal Room is one conversation for the signing group and the documents in the deal. A subscription badge can appear beside a member's handle.</p>
           </div>
           <ul class="space-y-2.5 mt-auto">
             <li class="flex items-start gap-2.5 text-sm text-slate-300"><span class="text-violet-300 mt-0.5"><svg class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span>512 px photo, compressed before upload</span></li>
             <li class="flex items-start gap-2.5 text-sm text-slate-300"><span class="text-violet-300 mt-0.5"><svg class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span>One room for the whole signing group</span></li>
-            <li class="flex items-start gap-2.5 text-sm text-slate-300"><span class="text-violet-300 mt-0.5"><svg class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span>Pro badge on a verified @handle</span></li>
+            <li class="flex items-start gap-2.5 text-sm text-slate-300"><span class="text-violet-300 mt-0.5"><svg class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span>Subscription badge on a member @handle</span></li>
           </ul>
         </div>
 
@@ -439,18 +419,18 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
         <div class="reveal feature-card glass-card rounded-3xl p-7 flex flex-col gap-4">
           <p class="text-sky-300 text-xs font-semibold tracking-widest uppercase">Messaging</p>
-          <h3 class="text-xl font-semibold text-white">End-to-End Encrypted 1:1 Direct Messaging</h3>
-          <p class="text-slate-400 leading-relaxed text-[15px]">Direct messages use X25519 key agreement and AES-256-GCM on your device. HashSign stores ciphertext, not the private key or the message text. Resetting a device key publishes a new public key and increments <span class="text-slate-200">keyVersion</span>.</p>
+          <h3 class="text-xl font-semibold text-white">Encrypted 1:1 messaging</h3>
+          <p class="text-slate-400 leading-relaxed text-[15px]">Direct messages are encrypted on your device before they are stored. HashSign stores ciphertext, not the private key or the message text. Resetting a device key publishes a new public key.</p>
         </div>
         <div class="reveal feature-card glass-card rounded-3xl p-7 flex flex-col gap-4">
-          <p class="text-emerald-300 text-xs font-semibold tracking-widest uppercase">United States · Pro</p>
+          <p class="text-emerald-300 text-xs font-semibold tracking-widest uppercase">United States only</p>
           <h3 class="text-xl font-semibold text-white">Biometric Face Signature</h3>
-          <p class="text-slate-400 leading-relaxed text-[15px]">A SHA-384 commitment bound to the document can be anchored on Hedera HCS. Raw frames are wiped on the device. The Pro sender pays; an invited signer can complete a required face signature without their own subscription.</p>
+          <p class="text-slate-400 leading-relaxed text-[15px]">Face Signature is US-only. A SHA-384 commitment bound to the document can be anchored on Hedera. Anchoring is a paid feature. Raw frames are wiped on the device. An invited signer in the United States can complete a required face signature.</p>
         </div>
         <div class="reveal feature-card glass-card rounded-3xl p-7 flex flex-col gap-4">
-          <p class="text-violet-300 text-xs font-semibold tracking-widest uppercase">United States · Pro</p>
+          <p class="text-violet-300 text-xs font-semibold tracking-widest uppercase">United States only</p>
           <h3 class="text-xl font-semibold text-white">US Government ID Verification</h3>
-          <p class="text-slate-400 leading-relaxed text-[15px]">A driver's license, state ID, or passport is read on the device. HashSign keeps a redacted attestation, not the ID photo or the ID number. Included with HashSign Pro at $79.99/year.</p>
+          <p class="text-slate-400 leading-relaxed text-[15px]">A driver's license, state ID, or passport is read on the device. HashSign keeps a redacted attestation, not the ID photo or the ID number. US ID verification is US-only.</p>
         </div>
       </div>
 
@@ -469,7 +449,7 @@
           <div>
             <p class="text-emerald-300 text-xs font-semibold tracking-widest uppercase mb-2">Mandate</p>
             <h3 class="text-lg font-semibold text-white mb-2">HSM- certificate ID</h3>
-            <p class="text-slate-400 text-sm leading-relaxed">An authorized agent records the Electronic Agent Mandate ID, such as HSM-GRK-7Q2M9X, on the activity log and the sealed file.</p>
+            <p class="text-slate-400 text-sm leading-relaxed">An authorized agent records the Electronic Agent Mandate ID on the activity log and the sealed file.</p>
           </div>
         </div>
       </div>
@@ -517,9 +497,9 @@
 
         <p class="text-sky-400 text-sm font-semibold tracking-widest uppercase mb-4">Available now</p>
         <h2 class="text-4xl font-bold text-white tracking-tight mb-4">Get HashSign™<br/>on your phone.</h2>
-        <p class="text-slate-400 mb-8 leading-relaxed">Draft on your phone, inspect against your own rules, and seal with a SHA-384 digest. HashSign Pro is $79.99/year on the App Store and Google Play.</p>
+        <p class="text-slate-400 mb-8 leading-relaxed">Draft on your phone, inspect against your own rules, and seal a tamper-evident SHA-384 record. Start free. Hedera anchoring is a paid feature.</p>
 
-        <div class="store-badges justify-center">
+        <div class="store-badges flex justify-center">
           <a class="store-badge" href="https://apps.apple.com/app/id6789818701" target="_blank" rel="noopener noreferrer">
             <img src="badges/app-store.svg" alt="Download on the App Store" width="120" height="40" />
           </a>
@@ -538,13 +518,15 @@
 
         <!-- Logo + copyright -->
         <div class="flex items-center gap-3">
-          <img src="logo.jpeg" alt="HashSign™"
+          <img src="/logo.webp" alt="HashSign logo" width="32" height="32"
                class="h-8 w-auto rounded-xl shadow-md shadow-black/50" />
-          <span class="text-sm text-slate-500">&copy; 2026 Exemplar Copy LLC d/b/a HashSign. All rights reserved.</span>
+          <span class="text-sm text-slate-500">Texas-based, veteran-owned. &copy; 2026 Exemplar Copy LLC d/b/a HashSign.</span>
         </div>
 
         <!-- Legal links — REQUIRED for Apple App Store compliance -->
         <nav aria-label="Legal and support links" class="flex items-center gap-6 flex-wrap justify-center">
+          <a href="/document-signing.html" class="text-sm text-slate-400 hover:text-white transition-colors">Document signing</a>
+          <a href="/hedera-document-proof.html" class="text-sm text-slate-400 hover:text-white transition-colors">Hedera proof</a>
           <a href="/privacy-policy.html"
              class="text-sm text-slate-400 hover:text-white transition-colors underline-offset-2 hover:underline">
             Privacy Policy
@@ -561,7 +543,7 @@
 
       </div>
 
-      <div class="store-badges justify-center mt-8">
+      <div class="store-badges flex justify-center mt-8">
         <a class="store-badge" href="https://apps.apple.com/app/id6789818701" target="_blank" rel="noopener noreferrer">
           <img src="badges/app-store.svg" alt="Download on the App Store" width="120" height="40" />
         </a>
@@ -572,11 +554,10 @@
 
       <!-- Store disclaimer -->
       <p class="mt-6 text-center text-xs text-slate-700 leading-relaxed max-w-xl mx-auto">
-        HashSign™ is an independent product and is not affiliated with or endorsed by Apple Inc. or Google LLC.
-        Apple, iPhone, Face ID, and iOS are trademarks of Apple Inc., registered in the U.S. and other countries.
+        HashSign is an independent product and is not affiliated with or endorsed by Apple Inc. or Google LLC.
+        Apple, iPhone, and iOS are trademarks of Apple Inc., registered in the U.S. and other countries.
         Google Play and the Google Play logo are trademarks of Google LLC.
-        Grok Connector and Muse Connector are independent interoperability connectors. HashSign is not affiliated with, endorsed by, or sponsored by xAI, Meta, Anthropic, OpenAI, or Google. Claude, ChatGPT, Gemini, Grok, Muse, and all other third-party names are trademarks of their respective owners.
-        Optional Cloud boost and Deep review use Google's Gemini API only after you tap them. Sealed documents are anchored with SHA-384 on Hedera.
+        Optional cloud review runs only when you tap it. A sealed PDF gets a tamper-evident SHA-384 record. Only the digest is anchored. HashSign is not a licensed notary.
       </p>
     </div>
   </footer>
