@@ -185,7 +185,7 @@
         <p><strong>Vault documents.</strong> Files you save or seal are protected by TLS in transit and AES-256 encryption at rest in Firebase Storage. When you seal a document, the App computes a SHA-384 digest and an ML-DSA (post-quantum) signature on your device. Anchoring submits that digest, not the file, to the Hedera Consensus Service. Anchoring is a paid feature.</p>
         <p>Your @handle is the name other members use to find you. A subscription badge may appear beside a member's @handle. That badge is not a government identity check.</p>
         <h2>8. Blockchain Anchoring (Hedera Network)</h2>
-        <p><strong>Public ledger notice.</strong> When you seal a document and anchor it, HashSign submits the SHA-384 digest of the finished PDF to the Hedera public ledger. The record is permanent. Exemplar Copy LLC cannot delete or edit it.</p>
+        <p><strong>Public ledger notice.</strong> When you seal a document and anchor it, HashSign submits the SHA-384 digest of the finished PDF to the Hedera public ledger. The SHA-384 digest is anchored on the Hedera ledger as a tamper-evident record. Exemplar Copy LLC cannot delete or edit that digest.</p>
         <ul>
         <li>Only the digest is submitted, not the document, its text, or your name or email.</li>
         <li>The digest is not reversible. No one can rebuild the file from the hash alone.</li>
@@ -224,7 +224,7 @@
         <li><strong>Profile photos:</strong> Deleted from Firebase Storage when you remove or replace them.</li>
         <li><strong>Cloud review results:</strong> The generated result may be kept for up to 14 days.</li>
         <li><strong>Messages and Deal Rooms:</strong> Kept so participants can read the history, until the conversation is deleted or the account-deletion process removes your copy.</li>
-        <li><strong>Blockchain hash records:</strong> Permanent on the Hedera ledger.</li>
+        <li><strong>Blockchain hash records:</strong> The SHA-384 digest is anchored on the Hedera ledger as a tamper-evident record.</li>
         <li><strong>Crash and diagnostic logs:</strong> Retained for up to 90 days in anonymized form.</li>
         <li><strong>Electronic Agent Mandate:</strong> Kept until you revoke it. Revocation stops new agent signing. Documents already sealed stay sealed.</li>
         </ul>
@@ -233,7 +233,7 @@
         <ul>
         <li><strong>Access:</strong> Request a copy of the personal data we hold about you.</li>
         <li><strong>Correction:</strong> Request correction of inaccurate personal data.</li>
-        <li><strong>Deletion:</strong> Request deletion of your personal data, subject to legal retention duties, files other people already received, and the permanent nature of a Hedera record.</li>
+        <li><strong>Deletion:</strong> Request deletion of your personal data, subject to legal retention duties, files other people already received, and a SHA-384 digest already anchored on Hedera.</li>
         <li><strong>Portability:</strong> Request a machine-readable export of your data.</li>
         <li><strong>Objection:</strong> Object to certain types of processing, including direct marketing.</li>
         <li><strong>Withdrawal of consent:</strong> Stop using Cloud boost, Deep review, or an Agent Connector at any time. Revoke an Electronic Agent Mandate in Agent Connectors. Withdrawal does not undo a document you already sealed.</li>
@@ -289,6 +289,7 @@
         <a href="/hedera-document-proof.html" class="text-sm text-slate-400 hover:text-white transition-colors">Hedera proof</a>
         <a href="/privacy-policy.html" class="text-sm text-sky-400 font-medium">Privacy Policy</a>
         <a href="/terms-of-service.html" class="text-sm text-slate-400 hover:text-white transition-colors">Terms of Use</a>
+        <a href="https://hashsign.io" class="text-sm text-slate-400 hover:text-white transition-colors">HashSign for developers and agents</a>
         <a href="mailto:support@hashsign.app" class="text-sm text-slate-400 hover:text-white transition-colors">Support</a>
       </nav>
     </div>

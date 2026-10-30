@@ -1,0 +1,13 @@
+# HashSign
+
+Exemplar Copy LLC d/b/a HashSign
+https://hashsign.app/
+Support: support@hashsign.app
+
+HashSign is a document signing app for iOS and Android. HashSign AI flags risky clauses. A sealed PDF gets a tamper-evident SHA-384 record. That digest is 96 hex characters. The document stays on the device until the user sends or shares it. Only the SHA-384 digest is anchored. Optional cloud review runs only when the user taps it.
+
+There is a free tier. Hedera anchoring is a paid feature. Face Signature is US-only.
+
+A SHA-384 digest shows a document has not changed since it was sealed. It does not prove who signed it. HashSign is not a licensed notary.
+
+Developers and agents: https://hashsign.io

@@ -132,7 +132,7 @@
         <p><strong>No legal advice.</strong> Cloud boost, Deep review, on-device drafting, and on-device inspection are automated informational tools. Their output is not legal advice, is not a recommendation to sign or not sign, and does not create an attorney-client relationship with Exemplar Copy LLC or anyone else. Have a lawyer review any document that matters to you.</p>
         <h2>4. Messages and documents</h2>
         <p>From HashSign version 1.3.0, 1:1 direct messages are encrypted on your device before they are stored. Private keys stay in Apple iCloud Keychain or the Android Keystore. HashSign's servers do not have those private keys or the message plaintext.</p>
-        <p>Deal Room messages and Vault documents are protected by TLS in transit and encryption at rest. That protection is separate from 1:1 encrypted messaging. A sealed document can carry an on-device post-quantum signature and a SHA-384 digest anchored to the Hedera Consensus Service. Only the digest is anchored, not the document. Anchoring is a paid feature. HashSign cannot delete a digest that has already been written to the ledger.</p>
+        <p>Deal Room messages and Vault documents are protected by TLS in transit and encryption at rest. That protection is separate from 1:1 encrypted messaging. A sealed document can carry an on-device post-quantum signature and a SHA-384 digest anchored to the Hedera Consensus Service. Only the digest is anchored, not the document. Anchoring is a paid feature. A SHA-384 digest shows the file has not changed since it was sealed. It does not prove who signed it. HashSign cannot delete a digest that has already been written to the ledger.</p>
         <p>Messages sent before version 1.3.0 were not encrypted on the device before they were stored.</p>
         <h2>5. Your account</h2>
         <p>You are responsible for the activity on your account and for the documents you upload or sign. Do not use the Service to break the law, to impersonate someone else, or to upload malware.</p>
@@ -160,6 +160,7 @@
         <a href="/hedera-document-proof.html" class="text-sm text-slate-400 hover:text-white transition-colors">Hedera proof</a>
         <a href="/privacy-policy.html" class="text-sm text-slate-400 hover:text-white transition-colors">Privacy Policy</a>
         <a href="/terms-of-service.html" class="text-sm text-sky-400 font-medium">Terms of Use</a>
+        <a href="https://hashsign.io" class="text-sm text-slate-400 hover:text-white transition-colors">HashSign for developers and agents</a>
         <a href="mailto:support@hashsign.app" class="text-sm text-slate-400 hover:text-white transition-colors">Support</a>
       </nav>
     </div>

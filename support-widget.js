@@ -48,10 +48,10 @@
       reply = "Deal Rooms use TLS in transit and cloud storage so newly invited counterparties can review shared history. 1:1 chats are encrypted messaging. Deal Rooms are stored for room members.";
     } else if (/face signature|id verification|bipa|cubi|biometric|passport/.test(text)) {
       topic = "biometrics";
-      reply = "US Face Signature and ID Verification are for United States signers only (Texas CUBI and Illinois BIPA). Consent is collected first. Raw frames and ID photos are wiped on the device and are not uploaded. The record is SHA-384(documentSha384|docId|signerUid|livenessFrameHash|timestamp) on Hedera Consensus Service.";
+      reply = "US Face Signature and ID Verification are for United States signers only (Texas CUBI and Illinois BIPA). Face Signature is US-only. Consent is collected first. Raw frames and ID photos are wiped on the device and are not sent to HashSign. The record is a SHA-384 commitment on Hedera Consensus Service. That digest shows the file has not changed since it was sealed. It does not prove who signed it.";
     } else if (/hedera|sha-?384|proof|anchor/.test(text)) {
       topic = "hedera";
-      reply = "A sealed document anchors a SHA-384 digest of the finished PDF, not the file, to Hedera Consensus Service. Compare the digest in the audit trail with the hash of the PDF you hold.";
+      reply = "A sealed document anchors a SHA-384 digest of the finished PDF, not the file, to Hedera Consensus Service. Anchoring is a paid feature. Compare the digest in the audit trail with the SHA-384 of the PDF you hold. The digest shows the file has not changed since it was sealed. It does not prove who signed it.";
     } else if (/subscription|restore purchase|cancel|free tier|paid/.test(text)) {
       topic = "subscription";
       reply = "HashSign has a free tier. Hedera anchoring is a paid feature. Paid features are billed by the App Store or Google Play at the price shown there. Restore a purchase in the app. Cancel in your Apple ID or Google Play subscription settings.";
